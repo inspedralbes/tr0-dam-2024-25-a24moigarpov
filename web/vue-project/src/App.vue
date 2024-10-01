@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import preguntas from './back/preguntas.json';
+import preguntas from '../back/preguntas.json';
 
 export default {
   data() {
