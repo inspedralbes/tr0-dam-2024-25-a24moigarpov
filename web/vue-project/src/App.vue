@@ -1,8 +1,8 @@
 <template>
   <div class="editor-container">
-    <button @click="resetForm" class="add-button">Añadir Pregunta</button>
     <h1>Editor de Preguntas</h1>
     <div v-if="questions.length === 0">No hay preguntas disponibles.</div>
+    
     <div v-for="(question, index) in questions" :key="index" class="question-card">
       <div class="question">
         <strong>{{ question.pregunta }}</strong>
@@ -17,6 +17,25 @@
         <button @click="editQuestion(index)" class="edit-button">Editar</button>
         <button @click="deleteQuestion(index)" class="delete-button">Eliminar</button>
       </div>
+    </div>
+
+    <!-- Sección para añadir una nueva pregunta -->
+    <div class="add-question-section">
+      <h2>Añadir Nueva Pregunta</h2>
+      <input v-model="newQuestion.pregunta" placeholder="Pregunta" class="input-field" />
+      <input v-model="newQuestion.imatge" placeholder="URL de Imagen" class="input-field" />
+      
+      <h3>Respuestas</h3>
+      <div v-for="(respuesta, idx) in newQuestion.respostes" :key="idx" class="respuesta-container">
+        <input v-model="respuesta.resposta" placeholder="Respuesta" class="input-field" />
+        <label>
+          <input type="radio" v-model="respuesta.correcta" :value="true" /> Correcta
+        </label>
+        <label>
+          <input type="radio" v-model="respuesta.correcta" :value="false" /> Incorrecta
+        </label>
+      </div>
+      <button @click="addQuestion" class="add-button">Añadir Pregunta</button>
     </div>
   </div>
 </template>
@@ -67,6 +86,15 @@ export default {
         ],
       };
     },
+    addQuestion() {
+      if (!this.newQuestion.pregunta || this.newQuestion.respostes.every(r => !r.resposta)) {
+        alert("Por favor, complete la pregunta y al menos una respuesta.");
+        return;
+      }
+
+      this.questions.push(this.newQuestion);
+      this.resetForm(); // Reiniciar el formulario
+    },
   },
 };
 </script>
@@ -84,17 +112,6 @@ export default {
 
 h1 {
   text-align: center;
-}
-
-.add-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  float: right;
-  margin-bottom: 20px;
 }
 
 .question-card {
@@ -119,22 +136,47 @@ h1 {
   margin-top: 10px;
 }
 
-.edit-button {
-  background-color: #007bff;
-  color: white;
+.edit-button, .delete-button {
   padding: 8px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.edit-button {
+  background-color: #007bff;
+  color: white;
   margin-right: 5px;
 }
 
 .delete-button {
   background-color: #dc3545;
   color: white;
-  padding: 8px;
+}
+
+.add-question-section {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.input-field {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
+  margin-top: 10px;
 }
 </style>
