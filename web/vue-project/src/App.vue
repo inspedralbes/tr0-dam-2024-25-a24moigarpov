@@ -15,13 +15,14 @@
       </ul>
       <div class="button-group">
         <button @click="editQuestion(index)" class="edit-button">Editar</button>
-        <button @click="deleteQuestion(index)" class="delete-button">Eliminar</button>
+        <button @click="deleteQuestion(question.id)" class="delete-button">Eliminar</button>
       </div>
     </div>
 
-    <!-- Sección para añadir una nueva pregunta -->
+    <!-- Sección para añadir o editar una pregunta -->
     <div class="add-question-section">
-      <h2>Añadir Nueva Pregunta</h2>
+      <h2>{{ isEditing ? 'Editar Pregunta' : 'Añadir Nueva Pregunta' }}</h2>
+      <input v-model="newQuestion.id" placeholder="ID" class="input-field" disabled v-if="isEditing"/>
       <input v-model="newQuestion.pregunta" placeholder="Pregunta" class="input-field" />
       <input v-model="newQuestion.imatge" placeholder="URL de Imagen" class="input-field" />
       
@@ -35,7 +36,9 @@
           <input type="radio" v-model="respuesta.correcta" :value="false" /> Incorrecta
         </label>
       </div>
-      <button @click="addQuestion" class="add-button">Añadir Pregunta</button>
+      <button @click="isEditing ? updateQuestion() : addQuestion()" class="add-button">
+        {{ isEditing ? 'Actualizar Pregunta' : 'Añadir Pregunta' }}
+      </button>
     </div>
   </div>
 </template>
@@ -45,7 +48,9 @@ export default {
   data() {
     return {
       questions: [],
+      isEditing: false,
       newQuestion: {
+        id: null, // Agregado para manejar el ID
         pregunta: '',
         imatge: '',
         respostes: [
@@ -58,24 +63,56 @@ export default {
     };
   },
   async mounted() {
-    try {
-      // Cambia la ruta a la de tu archivo JSON
-      const response = await import('C:/Users/Argo/tr0-dam-2024-25-a24moigarpov/back/preguntes.json');
-      this.questions = response.preguntes || []; // Asegúrate de usar 'preguntes' aquí
-    } catch (error) {
-      console.error("Error al cargar el JSON:", error);
-    }
+    await this.fetchQuestions();
   },
   methods: {
+    async fetchQuestions() {
+      try {
+        const response = await fetch('http://localhost:3000/api/preguntes');
+        const data = await response.json();
+        this.questions = data || [];
+      } catch (error) {
+        console.error("Error al cargar las preguntas:", error);
+      }
+    },
     editQuestion(index) {
       this.newQuestion = { ...this.questions[index] };
-      this.questions.splice(index, 1);
+      this.isEditing = true; // Cambiar a modo edición
     },
-    deleteQuestion(index) {
-      this.questions.splice(index, 1);
+    async updateQuestion() {
+      try {
+        const response = await fetch(`http://localhost:3000/api/preguntes/${this.newQuestion.id}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(this.newQuestion),
+        });
+
+        if (response.ok) {
+          this.resetForm(); // Reiniciar el formulario
+          this.isEditing = false; // Salir del modo edición
+          this.fetchQuestions(); // Recargar preguntas después de la actualización
+        }
+      } catch (error) {
+        console.error("Error al actualizar la pregunta:", error);
+      }
+    },
+    async deleteQuestion(id) {
+      try {
+        const response = await fetch(`http://localhost:3000/api/preguntes/${id}`, {
+          method: 'DELETE',
+        });
+        if (response.ok) {
+          this.fetchQuestions(); // Recargar preguntas después de eliminar
+        }
+      } catch (error) {
+        console.error("Error al eliminar la pregunta:", error);
+      }
     },
     resetForm() {
       this.newQuestion = {
+        id: null,
         pregunta: '',
         imatge: '',
         respostes: [
@@ -86,18 +123,33 @@ export default {
         ],
       };
     },
-    addQuestion() {
+    async addQuestion() {
       if (!this.newQuestion.pregunta || this.newQuestion.respostes.every(r => !r.resposta)) {
         alert("Por favor, complete la pregunta y al menos una respuesta.");
         return;
       }
 
-      this.questions.push(this.newQuestion);
-      this.resetForm(); // Reiniciar el formulario
+      try {
+        const response = await fetch('http://localhost:3000/api/preguntes', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(this.newQuestion),
+        });
+
+        if (response.ok) {
+          this.resetForm(); // Reiniciar el formulario
+          this.fetchQuestions(); // Recargar preguntas después de añadir
+        }
+      } catch (error) {
+        console.error("Error al añadir la pregunta:", error);
+      }
     },
   },
 };
 </script>
+
 
 <style scoped>
 .editor-container {
