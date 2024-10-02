@@ -3,20 +3,19 @@
     <h1>Editor de Preguntas</h1>
     <div v-if="questions.length === 0">No hay preguntas disponibles.</div>
     
-    <div v-for="(question, index) in questions" :key="question.id" class="question-card">
+    <div v-for="(question, index) in questions" :key="index" class="question-card">
       <div class="question">
         <strong>{{ question.pregunta }}</strong>
         <img :src="question.imatge" alt="Pregunta Imagen" class="question-image" />
       </div>
       <ul class="respuesta-list">
         <li v-for="(respuesta, idx) in question.respostes" :key="idx">
-          {{ respuesta.resposta }}
-          <span v-if="respuesta.correcta" class="correct-label">(Correcta)</span>
+          {{ respuesta.resposta }} <span v-if="respuesta.correcta">(Correcta)</span>
         </li>
       </ul>
       <div class="button-group">
-        <button @click="editQuestion(question.id)" class="edit-button">Editar</button>
-        <button @click="deleteQuestion(question.id, index)" class="delete-button">Eliminar</button>
+        <button @click="editQuestion(index)" class="edit-button">Editar</button>
+        <button @click="deleteQuestion(index)" class="delete-button">Eliminar</button>
       </div>
     </div>
 
@@ -29,10 +28,10 @@
       <h3>Respuestas</h3>
       <div v-for="(respuesta, idx) in newQuestion.respostes" :key="idx" class="respuesta-container">
         <input v-model="respuesta.resposta" placeholder="Respuesta" class="input-field" />
-        <label class="respuesta-label">
+        <label>
           <input type="radio" v-model="respuesta.correcta" :value="true" /> Correcta
         </label>
-        <label class="respuesta-label">
+        <label>
           <input type="radio" v-model="respuesta.correcta" :value="false" /> Incorrecta
         </label>
       </div>
@@ -50,99 +49,51 @@ export default {
         pregunta: '',
         imatge: '',
         respostes: [
-          { respuesta: '', correcta: false },
-          { respuesta: '', correcta: false },
-          { respuesta: '', correcta: false },
-          { respuesta: '', correcta: false },
+          { resposta: '', correcta: false },
+          { resposta: '', correcta: false },
+          { resposta: '', correcta: false },
+          { resposta: '', correcta: false },
         ],
       },
-      editing: false,
-      editingId: null,
     };
   },
   async mounted() {
-    await this.loadQuestions();
+    try {
+      // Cambia la ruta a la de tu archivo JSON
+      const response = await import('C:/Users/Argo/tr0-dam-2024-25-a24moigarpov/back/preguntes.json');
+      this.questions = response.preguntes || []; // Asegúrate de usar 'preguntes' aquí
+    } catch (error) {
+      console.error("Error al cargar el JSON:", error);
+    }
   },
   methods: {
-    async loadQuestions() {
-      try {
-        const response = await fetch('/api/preguntas');
-        if (!response.ok) throw new Error('Error al cargar preguntas');
-        const data = await response.json();
-        this.questions = data.preguntes || [];
-      } catch (error) {
-        console.error("Error al cargar el JSON:", error);
-      }
+    editQuestion(index) {
+      this.newQuestion = { ...this.questions[index] };
+      this.questions.splice(index, 1);
     },
-    async deleteQuestion(id, index) {
-      try {
-        const response = await fetch(`/api/preguntas/${id}`, { method: 'DELETE' });
-        if (!response.ok) throw new Error('Error al eliminar la pregunta');
-        this.questions.splice(index, 1); // Eliminar de la lista en la interfaz
-      } catch (error) {
-        console.error("Error al eliminar la pregunta:", error);
-      }
-    },
-    async editQuestion(id) {
-      const questionToEdit = this.questions.find(q => q.id === id);
-      if (questionToEdit) {
-        this.newQuestion = { ...questionToEdit };
-        this.editing = true;
-        this.editingId = id;
-      }
-    },
-    async updateQuestion() {
-      try {
-        const response = await fetch(`/api/preguntas/${this.editingId}`, {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(this.newQuestion)
-        });
-
-        if (!response.ok) throw new Error('Error al actualizar la pregunta');
-        await this.loadQuestions(); // Recargar preguntas
-        this.resetForm();
-      } catch (error) {
-        console.error("Error al actualizar la pregunta:", error);
-      }
-    },
-    async addQuestion() {
-      if (!this.newQuestion.pregunta || this.newQuestion.respostes.every(r => !r.respuesta)) {
-        alert("Por favor, complete la pregunta y al menos una respuesta.");
-        return;
-      }
-
-      try {
-        const response = await fetch('/api/preguntas', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(this.newQuestion)
-        });
-
-        if (!response.ok) throw new Error('Error al agregar la pregunta');
-        await this.loadQuestions(); // Recargar preguntas
-        this.resetForm(); // Reiniciar el formulario
-      } catch (error) {
-        console.error("Error al agregar la pregunta:", error);
-      }
+    deleteQuestion(index) {
+      this.questions.splice(index, 1);
     },
     resetForm() {
       this.newQuestion = {
         pregunta: '',
         imatge: '',
         respostes: [
-          { respuesta: '', correcta: false },
-          { respuesta: '', correcta: false },
-          { respuesta: '', correcta: false },
-          { respuesta: '', correcta: false },
+          { resposta: '', correcta: false },
+          { resposta: '', correcta: false },
+          { resposta: '', correcta: false },
+          { resposta: '', correcta: false },
         ],
       };
-      this.editing = false;
-      this.editingId = null;
+    },
+    addQuestion() {
+      if (!this.newQuestion.pregunta || this.newQuestion.respostes.every(r => !r.resposta)) {
+        alert("Por favor, complete la pregunta y al menos una respuesta.");
+        return;
+      }
+
+      this.questions.push(this.newQuestion);
+      this.resetForm(); // Reiniciar el formulario
     },
   },
 };
@@ -227,20 +178,5 @@ h1 {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
-}
-
-.respuesta-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.respuesta-label {
-  margin-left: 10px; /* Espacio entre respuesta y etiquetas de correcta/incorrecta */
-}
-
-.correct-label {
-  margin-left: 10px; /* Espacio entre respuesta y etiqueta de correcta */
-  color: green;
 }
 </style>
