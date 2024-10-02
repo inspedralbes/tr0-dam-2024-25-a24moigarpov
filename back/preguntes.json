@@ -2,30 +2,30 @@
   "preguntes": [
     {
       "id": 2,
-      "pregunta": "Quina marca de roba està representada pel logotip d'un cocodril?",
+      "pregunta": "Quina d'aquestes marques de cotxes és la del famós personatge de Transformers 'Bumblebee'?",
       "respostes": [
         {
           "id": 1,
-          "resposta": "Puma",
+          "resposta": "Ferrari",
           "correcta": false
         },
         {
           "id": 2,
-          "resposta": "Nike",
+          "resposta": "Audi",
           "correcta": false
         },
         {
           "id": 3,
-          "resposta": "Adidas",
+          "resposta": "BMW",
           "correcta": false
         },
         {
           "id": 4,
-          "resposta": "Lacoste",
+          "resposta": "Chevrolet Camaro",
           "correcta": true
         }
       ],
-      "imatge": "https://img.freepik.com/foto-gratis/tienda-ropa-tienda-ropa-perchas-tienda-boutique-moderna_1150-8886.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1727136000&semt=ais_hybrid"
+      "imatge": "https://wallpapercave.com/wp/wp4066837.jpg"
     },
     {
       "id": 3,
@@ -191,77 +191,50 @@
     },
     {
       "id": 9,
-      "pregunta": "Quina marca de rellotges té una corona com a logotip?",
+      "pregunta": "Quina d'aquestes empreses és la creadora del videojoc 'The Last of Us'?",
       "respostes": [
         {
           "id": 1,
-          "resposta": "Omega",
+          "resposta": "Ubisoft",
           "correcta": false
         },
         {
           "id": 2,
-          "resposta": "Rolex",
-          "correcta": true
-        },
-        {
-          "id": 3,
-          "resposta": "Tag Heuer",
-          "correcta": false
-        },
-        {
-          "id": 4,
-          "resposta": "Seiko",
-          "correcta": false
-        }
-      ],
-      "imatge": "https://st4.depositphotos.com/13324256/24136/i/450/depositphotos_241366582-stock-photo-selective-focus-elegant-wristwatches-lying.jpg"
-    },
-    {
-      "id": 10,
-      "pregunta": "Quina marca de xocolata té com a símbol una vaca lila?",
-      "respostes": [
-        {
-          "id": 1,
-          "resposta": "Nestlé",
-          "correcta": false
-        },
-        {
-          "id": 2,
-          "resposta": "Lindt",
+          "resposta": "Riot Games",
           "correcta": false
         },
         {
           "id": 3,
-          "resposta": "Milka",
+          "resposta": "Naughty Dog",
           "correcta": true
         },
         {
           "id": 4,
-          "resposta": "Ferrero",
+          "resposta": "Activision Blizzard",
           "correcta": false
         }
       ],
-      "imatge": "https://img.freepik.com/foto-gratis/arreglo-plano-deliciosas-tabletas-chocolate_23-2149349242.jpg"
+      "imatge": "https://i.redd.it/6mp2dh37lyg41.jpg"
     },
     {
       "id": 10,
-      "pregunta": "¿Cuál de estas marcas es un patrocinador actual del FC Barcelona?",
-      "imatge": "https://img2.rtve.es/i/?w=1600&i=1629965212358.jpg",
+      "pregunta": "Quina és la marca encarregada de produir la següent pel·lícula, 'Mid90s'?",
+      "imatge": "https://www.acuartaparede.com/wp-content/uploads/2019/06/Mid90s-soundtrack-available-to-stream-now.jpeg",
       "respostes": [
         {
-          "resposta": "Spotify",
+          "resposta": "Sony",
+          "correcta": false
+        },
+        {
+          "resposta": "A24",
           "correcta": true
         },
         {
-          "resposta": "Adidas",
+          "resposta": "Netflix",
           "correcta": false
         },
         {
-          "resposta": "Puma",
-          "correcta": false
-        },
-        {
-          "resposta": "JD",
+          "resposta": "Disney",
           "correcta": false
         }
       ]
