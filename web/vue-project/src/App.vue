@@ -1,7 +1,7 @@
 <template>
   <div class="editor-container">
     <h1>Editor de Preguntas</h1>
-    <div v-if="questions.length === 0">No hay preguntas disponibles.</div>
+    <div v-if="questions.length === 0" class="no-questions">No hay preguntas disponibles.</div>
     
     <div v-for="(question, index) in questions" :key="index" class="question-card">
       <div class="question">
@@ -159,21 +159,27 @@ export default {
   max-width: 800px;
   margin: auto;
   padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
+  background-color: #121212; /* Color de fondo oscuro */
+  color: #e0e0e0; /* Color de texto claro */
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-h1 {
+h1, h2, h3 {
   text-align: center;
+  color: #ffffff; /* Texto blanco para encabezados */
+}
+
+.no-questions {
+  text-align: center;
+  color: #ccc; /* Color más claro para el mensaje */
 }
 
 .question-card {
-  background-color: #fff;
+  background-color: #1e1e1e; /* Fondo de las tarjetas */
   padding: 15px;
   margin-bottom: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid #333; /* Borde oscuro */
   border-radius: 5px;
 }
 
@@ -191,6 +197,7 @@ h1 {
   display: flex; /* Utilizar flexbox para alinear los elementos */
   justify-content: space-between; /* Espacio entre el texto y las opciones */
   align-items: center; /* Centrar verticalmente */
+  color: #e0e0e0; /* Color de texto claro */
 }
 
 .radio-group {
@@ -210,34 +217,40 @@ h1 {
 }
 
 .edit-button {
-  background-color: #007bff;
+  background-color: #007bff; /* Color azul para editar */
   color: white;
   margin-right: 5px;
 }
 
 .delete-button {
-  background-color: #dc3545;
+  background-color: #dc3545; /* Color rojo para eliminar */
   color: white;
 }
 
 .add-question-section {
   margin-top: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #333; /* Borde oscuro */
   border-radius: 5px;
   padding: 20px;
-  background-color: #fff;
+  background-color: #1e1e1e; /* Fondo oscuro */
 }
 
 .input-field {
   width: calc(100% - 20px);
   padding: 10px;
   margin: 5px 0;
-  border: 1px solid #ccc;
+  border: 1px solid #444; /* Borde más oscuro */
   border-radius: 5px;
+  background-color: #333; /* Fondo de los campos de entrada */
+  color: #e0e0e0; /* Texto claro en los campos de entrada */
+}
+
+.input-field::placeholder {
+  color: #bbb; /* Color de placeholder */
 }
 
 .add-button {
-  background-color: #4caf50;
+  background-color: #4caf50; /* Color verde para añadir */
   color: white;
   padding: 10px 15px;
   border: none;

@@ -133,7 +133,7 @@
           "correcta": false
         }
       ],
-      "imatge": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp1XwE4w8NO-elmryVbhXWRg-2I52BNFL-YQ&s"
+      "imatge": "https://img.freepik.com/foto-gratis/gente-tiro-medio-corriendo-juntos_23-2149037629.jpg"
     },
     {
       "id": 7,
@@ -160,7 +160,7 @@
           "correcta": false
         }
       ],
-      "imatge": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9uoeIlmtzAjkrTZwQG0BslGLK_XDhW9S6Hw&s"
+      "imatge": "https://wallpapers.com/images/featured/shadow-the-hedgehog-57go7t3m1is5ixgx.jpg"
     },
     {
       "id": 8,
@@ -187,7 +187,7 @@
           "correcta": false
         }
       ],
-      "imatge": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7tMx4bFgOSvoO8elLU7pdb8_Y_uiQjMvSZA&s"
+      "imatge": "https://static.nationalgeographic.es/files/styles/image_3200/public/mm10052_20221117_399_cropped.jpg?w=1600&h=900"
     },
     {
       "id": 9,
@@ -242,33 +242,6 @@
         }
       ],
       "imatge": "https://img.freepik.com/foto-gratis/arreglo-plano-deliciosas-tabletas-chocolate_23-2149349242.jpg"
-    },
-    {
-      "id": 11,
-      "pregunta": "Quina marca de cotxes utilitza el lema 'Ultimate Driving Machine'?",
-      "respostes": [
-        {
-          "id": 1,
-          "resposta": "Mercedes-Benz",
-          "correcta": false
-        },
-        {
-          "id": 2,
-          "resposta": "BMW",
-          "correcta": true
-        },
-        {
-          "id": 3,
-          "resposta": "Audi",
-          "correcta": false
-        },
-        {
-          "id": 4,
-          "resposta": "Lexuss",
-          "correcta": false
-        }
-      ],
-      "imatge": "https://img.freepik.com/foto-gratis/fila-coches-nuevos-puerto_335224-805.jpg"
     }
   ]
 }
