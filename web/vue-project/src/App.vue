@@ -184,8 +184,114 @@ h1, h2, h3 {
 }
 
 .question-image {
-  max-width: 100%;
-  height: auto;
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  height: 150px; /* Establece una altura fija para las imágenes */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionar */
+}
+
+.respuesta-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.respuesta-item {
+  display: flex; /* Utilizar flexbox para alinear los elementos */
+  justify-content: space-between; /* Espacio entre el texto y las opciones */
+  align-items: center; /* Centrar verticalmente */
+  color: #e0e0e0; /* Color de texto claro */
+}
+
+.radio-group {
+  display: flex; /* Mostrar opciones en línea */
+  gap: 10px; /* Espacio entre los botones */
+}
+
+.button-group {
+  margin-top: 10px;
+}
+
+.edit-button, .delete-button {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #007bff; /* Color azul para editar */
+  color: white;
+  margin-right: 5px;
+}
+
+.delete-button {
+  background-color: #dc3545; /* Color rojo para eliminar */
+  color: white;
+}
+
+.add-question-section {
+  margin-top: 20px;
+  border: 1px solid #333; /* Borde oscuro */
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #1e1e1e; /* Fondo oscuro */
+}
+
+.input-field {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #444; /* Borde más oscuro */
+  border-radius: 5px;
+  background-color: #333; /* Fondo de los campos de entrada */
+  color: #e0e0e0; /* Texto claro en los campos de entrada */
+}
+
+.input-field::placeholder {
+  color: #bbb; /* Color de placeholder */
+}
+
+.add-button {
+  background-color: #4caf50; /* Color verde para añadir */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+<style scoped>
+.editor-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: #121212; /* Color de fondo oscuro */
+  color: #e0e0e0; /* Color de texto claro */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2, h3 {
+  text-align: center;
+  color: #ffffff; /* Texto blanco para encabezados */
+}
+
+.no-questions {
+  text-align: center;
+  color: #ccc; /* Color más claro para el mensaje */
+}
+
+.question-card {
+  background-color: #1e1e1e; /* Fondo de las tarjetas */
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #333; /* Borde oscuro */
+  border-radius: 5px;
+}
+
+.question-image {
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  height: 400px; /* Establece una altura fija para las imágenes */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionar */
 }
 
 .respuesta-list {

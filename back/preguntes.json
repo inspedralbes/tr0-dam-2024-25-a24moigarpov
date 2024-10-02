@@ -242,6 +242,29 @@
         }
       ],
       "imatge": "https://img.freepik.com/foto-gratis/arreglo-plano-deliciosas-tabletas-chocolate_23-2149349242.jpg"
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Cuál de estas marcas es un patrocinador actual del FC Barcelona?",
+      "imatge": "https://img2.rtve.es/i/?w=1600&i=1629965212358.jpg",
+      "respostes": [
+        {
+          "resposta": "Spotify",
+          "correcta": true
+        },
+        {
+          "resposta": "Adidas",
+          "correcta": false
+        },
+        {
+          "resposta": "Puma",
+          "correcta": false
+        },
+        {
+          "resposta": "JD",
+          "correcta": false
+        }
+      ]
     }
   ]
 }
