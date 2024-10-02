@@ -9,8 +9,10 @@
         <img :src="question.imatge" alt="Pregunta Imagen" class="question-image" />
       </div>
       <ul class="respuesta-list">
-        <li v-for="(respuesta, idx) in question.respostes" :key="idx">
-          {{ respuesta.resposta }} <span v-if="respuesta.correcta">(Correcta)</span>
+        <li v-for="(respuesta, idx) in question.respostes" :key="idx" class="respuesta-item">
+          {{ respuesta.resposta }}
+          <span v-if="respuesta.correcta">(Correcta)</span>
+          <span v-else>(Incorrecta)</span>
         </li>
       </ul>
       <div class="button-group">
@@ -29,12 +31,14 @@
       <h3>Respuestas</h3>
       <div v-for="(respuesta, idx) in newQuestion.respostes" :key="idx" class="respuesta-container">
         <input v-model="respuesta.resposta" placeholder="Respuesta" class="input-field" />
-        <label>
-          <input type="radio" v-model="respuesta.correcta" :value="true" /> Correcta
-        </label>
-        <label>
-          <input type="radio" v-model="respuesta.correcta" :value="false" /> Incorrecta
-        </label>
+        <span class="radio-group">
+          <label>
+            <input type="radio" v-model="respuesta.correcta" :value="true" /> Correcta
+          </label>
+          <label>
+            <input type="radio" v-model="respuesta.correcta" :value="false" /> Incorrecta
+          </label>
+        </span>
       </div>
       <button @click="isEditing ? updateQuestion() : addQuestion()" class="add-button">
         {{ isEditing ? 'Actualizar Pregunta' : 'Añadir Pregunta' }}
@@ -150,7 +154,6 @@ export default {
 };
 </script>
 
-
 <style scoped>
 .editor-container {
   max-width: 800px;
@@ -182,6 +185,17 @@ h1 {
 .respuesta-list {
   list-style-type: none;
   padding: 0;
+}
+
+.respuesta-item {
+  display: flex; /* Utilizar flexbox para alinear los elementos */
+  justify-content: space-between; /* Espacio entre el texto y las opciones */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.radio-group {
+  display: flex; /* Mostrar opciones en línea */
+  gap: 10px; /* Espacio entre los botones */
 }
 
 .button-group {
