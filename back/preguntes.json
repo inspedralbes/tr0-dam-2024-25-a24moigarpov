@@ -83,34 +83,34 @@
     },
     {
       "id": 5,
-      "pregunta": "Quina marca de refrescos té un logotip vermell amb una onada blanca?",
+      "pregunta": "Quina és la marca creadora de la famosa aplicació de futbol Fantasy?",
       "respostes": [
         {
           "id": 1,
-          "resposta": "Coca-Cola",
-          "correcta": true
-        },
-        {
-          "id": 2,
-          "resposta": "Pepsi",
+          "resposta": "Sport",
           "correcta": false
         },
         {
+          "id": 2,
+          "resposta": "Marca",
+          "correcta": true
+        },
+        {
           "id": 3,
-          "resposta": "Sprite",
+          "resposta": "Fifa",
           "correcta": false
         },
         {
           "id": 4,
-          "resposta": "Fanta",
+          "resposta": "New Balance",
           "correcta": false
         }
       ],
-      "imatge": "https://cdn.static.aptavs.com/imagenes/que-entendemos-por-refresco_905x603.jpg"
+      "imatge": "https://s2.sportstatics.com/relevo/www/multimedia/202307/21/media/cortadas/fantasy-horizontal-RprVFwyKMnhsCrEuBbGIpZJ-1200x648@Relevo.jpg"
     },
     {
       "id": 6,
-      "pregunta": "Quina marca de calçat és famosa pel seu eslògan 'Just Do It'?",
+      "pregunta": "Quina empresa és la creadora de la icònica marca Jordan?",
       "respostes": [
         {
           "id": 1,
@@ -133,7 +133,7 @@
           "correcta": false
         }
       ],
-      "imatge": "https://img.freepik.com/foto-gratis/gente-tiro-medio-corriendo-juntos_23-2149037629.jpg"
+      "imatge": "https://wallpapers.com/images/hd/slam-dunk-by-michael-jordan-hd-9u5rmm6ln771x8ld.jpg"
     },
     {
       "id": 7,
@@ -231,7 +231,7 @@
         },
         {
           "resposta": "Netflix",
-          "correcta": false
+          "correcta": true
         },
         {
           "resposta": "Disney",
