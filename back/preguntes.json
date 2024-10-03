@@ -238,6 +238,29 @@
           "correcta": false
         }
       ]
+    },
+    {
+      "id": 11,
+      "pregunta": "Quina de les següents marques comercials és famosa per desenvolupar i publicar la sèrie de videojocs \"grand theft auto\"?",
+      "imatge": "https://media.revistagq.com/photos/6013bf464a3723647e5c158b/16:9/w_2560%2Cc_limit/grand-theft-auto-v-videojuego.jpg",
+      "respostes": [
+        {
+          "resposta": "Activision",
+          "correcta": false
+        },
+        {
+          "resposta": "Ubisoft",
+          "correcta": false
+        },
+        {
+          "resposta": "Electronic Arts",
+          "correcta": false
+        },
+        {
+          "resposta": "Rockstar games",
+          "correcta": true
+        }
+      ]
     }
   ]
 }
