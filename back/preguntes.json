@@ -1,7 +1,7 @@
 {
   "preguntes": [
     {
-      "id": 2,
+      "id": 1,
       "pregunta": "Quina d'aquestes marques de cotxes és la del famós personatge de Transformers 'Bumblebee'?",
       "respostes": [
         {
@@ -28,7 +28,7 @@
       "imatge": "https://wallpapercave.com/wp/wp4066837.jpg"
     },
     {
-      "id": 3,
+      "id": 2,
       "pregunta": "Quina marca de tecnologia fabrica l'iPhone?",
       "respostes": [
         {
@@ -55,7 +55,7 @@
       "imatge": "https://imagenes.20minutos.es/files/image_990_556/uploads/imagenes/2024/01/23/muchos-moviles.jpeg"
     },
     {
-      "id": 4,
+      "id": 3,
       "pregunta": "Quina marca de menjar ràpid té un logotip amb arcs daurats?",
       "respostes": [
         {
@@ -82,7 +82,7 @@
       "imatge": "https://img.freepik.com/foto-gratis/primer-plano-deliciosa-comida-hamburguesa_23-2151434076.jpg"
     },
     {
-      "id": 5,
+      "id": 4,
       "pregunta": "Quina és la marca creadora de la famosa aplicació de futbol Fantasy?",
       "respostes": [
         {
@@ -109,7 +109,7 @@
       "imatge": "https://s2.sportstatics.com/relevo/www/multimedia/202307/21/media/cortadas/fantasy-horizontal-RprVFwyKMnhsCrEuBbGIpZJ-1200x648@Relevo.jpg"
     },
     {
-      "id": 6,
+      "id": 5,
       "pregunta": "Quina empresa és la creadora de la icònica marca Jordan?",
       "respostes": [
         {
@@ -136,7 +136,7 @@
       "imatge": "https://wallpapers.com/images/hd/slam-dunk-by-michael-jordan-hd-9u5rmm6ln771x8ld.jpg"
     },
     {
-      "id": 7,
+      "id": 6,
       "pregunta": "Quina marca de videojocs té com a mascota un eriçó blau?",
       "respostes": [
         {
@@ -163,7 +163,7 @@
       "imatge": "https://wallpapers.com/images/featured/shadow-the-hedgehog-57go7t3m1is5ixgx.jpg"
     },
     {
-      "id": 8,
+      "id": 7,
       "pregunta": "Quina marca de càmeres és coneguda pel model EOS?",
       "respostes": [
         {
@@ -190,7 +190,7 @@
       "imatge": "https://static.nationalgeographic.es/files/styles/image_3200/public/mm10052_20221117_399_cropped.jpg?w=1600&h=900"
     },
     {
-      "id": 9,
+      "id": 8,
       "pregunta": "Quina d'aquestes empreses és la creadora del videojoc 'The Last of Us'?",
       "respostes": [
         {
@@ -217,7 +217,7 @@
       "imatge": "https://i.redd.it/6mp2dh37lyg41.jpg"
     },
     {
-      "id": 10,
+      "id": 9,
       "pregunta": "Quina és la marca encarregada de produir la següent pel·lícula, 'Mid90s'?",
       "imatge": "https://www.acuartaparede.com/wp-content/uploads/2019/06/Mid90s-soundtrack-available-to-stream-now.jpeg",
       "respostes": [
@@ -240,7 +240,7 @@
       ]
     },
     {
-      "id": 11,
+      "id": 10,
       "pregunta": "Quina de les següents marques comercials és famosa per desenvolupar i publicar la sèrie de videojocs \"grand theft auto\"?",
       "imatge": "https://media.revistagq.com/photos/6013bf464a3723647e5c158b/16:9/w_2560%2Cc_limit/grand-theft-auto-v-videojuego.jpg",
       "respostes": [
@@ -258,6 +258,33 @@
         },
         {
           "resposta": "Rockstar games",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "pregunta": "Quina de les següents marques d'automòbils és coneguda per la seva associació amb la pel·lícula \"Batman Begins\" i altres films de la franquícia \"Batman\"?",
+      "imatge": "https://thecollision.org/wp-content/uploads/2020/07/TDK4-1.jpg",
+      "respostes": [
+        {
+          "id": 1,
+          "resposta": "Lamborghini",
+          "correcta": false
+        },
+        {
+          "id": 2,
+          "resposta": "Chevrolet",
+          "correcta": false
+        },
+        {
+          "id": 3,
+          "resposta": "Mercedes-Benz",
+          "correcta": false
+        },
+        {
+          "id": 4,
+          "resposta": "Ford",
           "correcta": true
         }
       ]
