@@ -25,7 +25,7 @@
           "correcta": true
         }
       ],
-      "imatge": "https://wallpapercave.com/wp/wp4066837.jpg"
+      "imatge": "https://images.hdqwalls.com/wallpapers/bumblebee-4k-2020-t5.jpg"
     },
     {
       "id": 2,
@@ -56,30 +56,30 @@
     },
     {
       "id": 3,
-      "pregunta": "Quina marca de menjar ràpid té un logotip amb arcs daurats?",
+      "pregunta": "Quina marca és la responsable de crear les pel·lícules de Spider-Man?",
       "respostes": [
         {
           "id": 1,
-          "resposta": "Wendy's",
+          "resposta": "DC",
           "correcta": false
         },
         {
           "id": 2,
-          "resposta": "KFC",
-          "correcta": false
-        },
-        {
-          "id": 3,
-          "resposta": "McDonald's",
+          "resposta": "Sony",
           "correcta": true
         },
         {
+          "id": 3,
+          "resposta": "Warner",
+          "correcta": false
+        },
+        {
           "id": 4,
-          "resposta": "Burger King",
+          "resposta": "HBO",
           "correcta": false
         }
       ],
-      "imatge": "https://img.freepik.com/foto-gratis/primer-plano-deliciosa-comida-hamburguesa_23-2151434076.jpg"
+      "imatge": "https://getwallpapers.com/wallpaper/full/0/c/c/243743.jpg"
     },
     {
       "id": 4,
