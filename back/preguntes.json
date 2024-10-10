@@ -1,0 +1,293 @@
+{
+  "preguntes": [
+    {
+      "id": 1,
+      "pregunta": "Quina d'aquestes marques de cotxes és la del famós personatge de Transformers 'Bumblebee'?",
+      "respostes": [
+        {
+          "id": 1,
+          "resposta": "Ferrari",
+          "correcta": false
+        },
+        {
+          "id": 2,
+          "resposta": "Audi",
+          "correcta": false
+        },
+        {
+          "id": 3,
+          "resposta": "BMW",
+          "correcta": false
+        },
+        {
+          "id": 4,
+          "resposta": "Chevrolet Camaro",
+          "correcta": true
+        }
+      ],
+      "imatge": "https://images.hdqwalls.com/wallpapers/bumblebee-4k-2020-t5.jpg"
+    },
+    {
+      "id": 2,
+      "pregunta": "Quina marca de tecnologia fabrica l'iPhone?",
+      "respostes": [
+        {
+          "id": 1,
+          "resposta": "Huawei",
+          "correcta": false
+        },
+        {
+          "id": 2,
+          "resposta": "Xiaomi",
+          "correcta": false
+        },
+        {
+          "id": 3,
+          "resposta": "Apple",
+          "correcta": true
+        },
+        {
+          "id": 4,
+          "resposta": "Samsung",
+          "correcta": false
+        }
+      ],
+      "imatge": "https://imagenes.20minutos.es/files/image_990_556/uploads/imagenes/2024/01/23/muchos-moviles.jpeg"
+    },
+    {
+      "id": 3,
+      "pregunta": "Quina marca és la responsable de crear les pel·lícules de Spider-Man?",
+      "respostes": [
+        {
+          "id": 1,
+          "resposta": "DC",
+          "correcta": false
+        },
+        {
+          "id": 2,
+          "resposta": "Sony",
+          "correcta": true
+        },
+        {
+          "id": 3,
+          "resposta": "Warner",
+          "correcta": false
+        },
+        {
+          "id": 4,
+          "resposta": "HBO",
+          "correcta": false
+        }
+      ],
+      "imatge": "https://getwallpapers.com/wallpaper/full/0/c/c/243743.jpg"
+    },
+    {
+      "id": 4,
+      "pregunta": "Quina és la marca creadora de la famosa aplicació de futbol Fantasy?",
+      "respostes": [
+        {
+          "id": 1,
+          "resposta": "Sport",
+          "correcta": false
+        },
+        {
+          "id": 2,
+          "resposta": "Marca",
+          "correcta": true
+        },
+        {
+          "id": 3,
+          "resposta": "Fifa",
+          "correcta": false
+        },
+        {
+          "id": 4,
+          "resposta": "New Balance",
+          "correcta": false
+        }
+      ],
+      "imatge": "https://s2.sportstatics.com/relevo/www/multimedia/202307/21/media/cortadas/fantasy-horizontal-RprVFwyKMnhsCrEuBbGIpZJ-1200x648@Relevo.jpg"
+    },
+    {
+      "id": 5,
+      "pregunta": "Quina és la marca de les famoses zapatilles que porta Miles Morales a la seva pel·lícula animada?",
+      "respostes": [
+        {
+          "id": 1,
+          "resposta": "Adidas",
+          "correcta": false
+        },
+        {
+          "id": 2,
+          "resposta": "Puma",
+          "correcta": false
+        },
+        {
+          "id": 3,
+          "resposta": "Nike",
+          "correcta": true
+        },
+        {
+          "id": 4,
+          "resposta": "Reebok",
+          "correcta": false
+        }
+      ],
+      "imatge": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/21ef627d-4c05-4ec0-8ba9-307583f2e9d4/dfztnww-e97a7150-33fc-4680-86fc-9eae21c62e18.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzIxZWY2MjdkLTRjMDUtNGVjMC04YmE5LTMwNzU4M2YyZTlkNFwvZGZ6dG53dy1lOTdhNzE1MC0zM2ZjLTQ2ODAtODZmYy05ZWFlMjFjNjJlMTguanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.GO_vNqHcYQBbov07FkCTM1fsfwnKkZKoTfRED1p5gqU"
+    },
+    {
+      "id": 6,
+      "pregunta": "Quina marca de videojocs té com a mascota un eriçó blau?",
+      "respostes": [
+        {
+          "id": 1,
+          "resposta": "Nintendo",
+          "correcta": false
+        },
+        {
+          "id": 2,
+          "resposta": "Sega",
+          "correcta": true
+        },
+        {
+          "id": 3,
+          "resposta": "Sony",
+          "correcta": false
+        },
+        {
+          "id": 4,
+          "resposta": "Atari",
+          "correcta": false
+        }
+      ],
+      "imatge": "https://wallpapers.com/images/featured/shadow-the-hedgehog-57go7t3m1is5ixgx.jpg"
+    },
+    {
+      "id": 7,
+      "pregunta": "Quina marca de càmeres és coneguda pel model EOS?",
+      "respostes": [
+        {
+          "id": 1,
+          "resposta": "Canon",
+          "correcta": true
+        },
+        {
+          "id": 2,
+          "resposta": "Nikon",
+          "correcta": false
+        },
+        {
+          "id": 3,
+          "resposta": "Sony",
+          "correcta": false
+        },
+        {
+          "id": 4,
+          "resposta": "Olympus",
+          "correcta": false
+        }
+      ],
+      "imatge": "https://static.nationalgeographic.es/files/styles/image_3200/public/mm10052_20221117_399_cropped.jpg?w=1600&h=900"
+    },
+    {
+      "id": 8,
+      "pregunta": "Quina d'aquestes empreses és la creadora del videojoc 'The Last of Us'?",
+      "respostes": [
+        {
+          "id": 1,
+          "resposta": "Ubisoft",
+          "correcta": false
+        },
+        {
+          "id": 2,
+          "resposta": "Riot Games",
+          "correcta": false
+        },
+        {
+          "id": 3,
+          "resposta": "Naughty Dog",
+          "correcta": true
+        },
+        {
+          "id": 4,
+          "resposta": "Activision Blizzard",
+          "correcta": false
+        }
+      ],
+      "imatge": "https://i.redd.it/6mp2dh37lyg41.jpg"
+    },
+    {
+      "id": 9,
+      "pregunta": "Quina és la marca encarregada de produir la següent pel·lícula, 'Mid90s'?",
+      "imatge": "https://www.acuartaparede.com/wp-content/uploads/2019/06/Mid90s-soundtrack-available-to-stream-now.jpeg",
+      "respostes": [
+        {
+          "resposta": "Sony",
+          "correcta": false
+        },
+        {
+          "resposta": "A24",
+          "correcta": true
+        },
+        {
+          "resposta": "Netflix",
+          "correcta": false
+        },
+        {
+          "resposta": "Disney",
+          "correcta": false
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "pregunta": "Quina de les següents marques comercials és famosa per desenvolupar i publicar la sèrie de videojocs \"grand theft auto\"?",
+      "imatge": "https://media.revistagq.com/photos/6013bf464a3723647e5c158b/16:9/w_2560%2Cc_limit/grand-theft-auto-v-videojuego.jpg",
+      "respostes": [
+        {
+          "resposta": "Activision",
+          "correcta": false
+        },
+        {
+          "resposta": "Ubisoft",
+          "correcta": false
+        },
+        {
+          "resposta": "Electronic Arts",
+          "correcta": false
+        },
+        {
+          "resposta": "Rockstar games",
+          "correcta": true
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "pregunta": "Quina de les següents marques d'automòbils és coneguda per la seva associació amb la pel·lícula \"Batman Begins\" i altres films de la franquícia \"Batman\"?",
+      "imatge": "https://thecollision.org/wp-content/uploads/2020/07/TDK4-1.jpg",
+      "respostes": [
+        {
+          "id": 1,
+          "resposta": "Lamborghini",
+          "correcta": false
+        },
+        {
+          "id": 2,
+          "resposta": "Chevrolet",
+          "correcta": false
+        },
+        {
+          "id": 3,
+          "resposta": "Mercedes-Benz",
+          "correcta": false
+        },
+        {
+          "id": 4,
+          "resposta": "Ford",
+          "correcta": true
+        }
+      ]
+    }
+  ]
+}
