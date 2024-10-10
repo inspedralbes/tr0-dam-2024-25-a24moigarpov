@@ -71,7 +71,7 @@ export default {
   methods: {
     async fetchQuestions() {
       try {
-        const response = await fetch('http://localhost:3000/api/preguntes');
+        const response = await fetch('http://a24moigarpov.dam.inspedralbes.cat:25555/api/preguntes');
         this.questions = await response.json() || [];
       } catch (error) {
         console.error("Error al cargar las preguntas:", error);
@@ -83,7 +83,7 @@ export default {
     },
     async updateQuestion() {
       try {
-        await fetch(`http://localhost:3000/api/preguntes/${this.newQuestion.id}`, {
+        await fetch(`http://a24moigarpov.dam.inspedralbes.cat:25555/api/preguntes/${this.newQuestion.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -99,7 +99,7 @@ export default {
     },
     async deleteQuestion(id) {
       try {
-        await fetch(`http://localhost:3000/api/preguntes/${id}`, { method: 'DELETE' });
+        await fetch(`http://a24moigarpov.dam.inspedralbes.cat:25555/api/preguntes/${id}`, { method: 'DELETE' });
         await this.fetchQuestions(); // Recargar preguntas
       } catch (error) {
         console.error("Error al eliminar la pregunta:", error);
@@ -137,7 +137,7 @@ export default {
       });
 
       try {
-        await fetch('http://localhost:3000/api/preguntes', {
+        await fetch('http://a24moigarpov.dam.inspedralbes.cat:25555/api/preguntes', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
